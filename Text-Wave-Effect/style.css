@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+:root {
+    --color-bg: steelblue;
+    --container-fill:rgba(0, 0, 0, 0.4);
+    --left-bg-color: rgba(80, 84, 236, 0.6);
+    --right-bg-color: rgba(43, 43, 43, 0.6);
+    --btn-left-hover-color: rgba(80, 84, 236, 1);
+    --btn-right-hover-color: rgba(43, 43, 43, 1);
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: var(--container-fill);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.container h1 {
+    color: lightblue;
+    text-align: center;
+    margin-bottom: 50px;  
+  
+}
+
+.form-control {
+    position: relative;
+    background-color: transparent;
+    margin: 20px 0 40px;
+    width: 300px;
+}
+
+.form-control input {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    color: #fff;
+    font-size: 15px;
+}
+
+.form-control input:focus, .form-control input:valid {
+    outline: none;
+    border-bottom: 1px solid lightblue;
+}
+
+.btn {
+    width: 100%;
+    font-size: 16px;
+    color:#fff;
+    background-color:lightblue;
+    border: 0;
+    margin-top: 5px;
+    height: 26px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.text {
+margin-top: 30px;
+font-size: 15px;
+}
+.text a {
+color:lightblue;
+text-decoration: none;
+}
+
+.form-control label {
+    position: absolute;
+    left: 0;
+    top: -15px;
+    color:#fff;
+}
+
+.form-control label span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span, 
+.form-control input:valid + label span {
+    color: lightblue;
+    transform: translateY(-25px);
+    
+}
